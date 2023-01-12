@@ -1,0 +1,262 @@
+:root{
+	--color-purple: #8988B0;
+	--color-white: #F2F2F2;
+	--color-black: #292929;
+
+	--color-html: #F06529D9;
+	--color-js: #F0DB4F;
+	--color-css:  #2965F1;
+}
+html,body{scroll-behavior: smooth;}
+body{
+	background: var(--color-purple);
+}
+header {
+	width: 100%;
+	height: 100vh;
+
+	border-bottom: 1px solid #FFF;
+}
+
+header .top {
+	width: 100%;
+	height: 2.5rem;
+
+	backdrop-filter: blur(5px);
+	border-bottom: 1px solid var(--color-purple);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	position: fixed;
+
+	padding: 2rem;
+	z-index: 9999;
+}
+header .top nav{width: 50%;}
+header .top ul{
+	width: 100%;
+	text-align: center;
+}
+header .top nav ul a{
+	padding: 4%;
+
+	color: var(--color-white);
+	font-size: 0.9em;
+	font-weight: 600;
+	position: relative;
+}
+header .top nav ul a:hover{
+	cursor: pointer;
+	transition: .25s;
+	filter: brightness(90%);
+}
+header .top .lang{
+	width: 10%;
+}
+header .top .lang button{
+	width: 45%;
+	background: transparent;
+	border: 1px dashed var(--color-white);
+
+	padding: 4%;
+	border-radius: .25rem;
+
+	color: var(--color-white);
+	font-weight: 600;
+}
+header .top .lang button:hover{
+	cursor: pointer;
+	transition: .25s;
+	background: var(--color-white);
+	color: var(--color-black);
+}
+header .top .lang .lang-active{
+	background: var(--color-white);
+	color: var(--color-black);
+}
+header .banner{
+	width: 100%;
+	height: calc(100vh - 4.5rem);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	/* padding-left: 15rem; */
+	/* padding-bottom: 3rem; */
+
+	padding: 2rem 3rem 2rem 15rem;
+}
+header .banner .box {
+	width: 100%;
+}
+header .banner .left span{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+header .banner .left .hello{
+	margin-bottom: 2rem;
+}
+header .banner .left .hello strong{
+	width: 1.7rem;
+	height: 0.13rem;
+	background: var(--color-white);
+}
+header .banner .left .hello p{
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--color-white);
+
+}
+
+header .banner .left .name {
+	width: 100%;
+	font-size: 1.9em;
+	color: var(--color-black);
+	font-family: 'Courier Prime', monospace;
+}
+header .banner .left .name .white{
+	color: var(--color-white);
+}
+
+header .banner .left .about{
+	max-width: 70%;
+	font-size: 1.05em;
+	color: var(--color-white);
+	margin-top: 2rem;
+}
+
+header .banner .left button{
+	width: 35%;
+	margin: 4rem 0;
+	padding: .65rem;
+	background: var(--color-white);
+	border: 2px solid var(--color-white);
+	font-size: 0.8em;
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, .05);
+}
+header .banner .left button:hover{
+	cursor: pointer;
+	transition: .25s;
+	background: transparent;
+	color: var(--color-white);
+}
+
+header .right {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	position: relative;
+}
+
+
+header .right img{width: 85%;}
+
+header .right button {
+	background: transparent;
+	color: var(--color-white);
+	border: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+
+	font-size: .9em;
+	cursor: pointer;
+
+	animation: shakeY 2s ease infinite both;
+}
+@keyframes shakeY{
+	0%{transform: translateY(0)}
+	50%{transform: translateY(10px)}
+}
+header .right button p{
+	writing-mode: vertical-lr;
+}
+main .my-skills{
+	padding: 2rem;
+	text-align: center;
+}
+main .my-skills h1{
+	font-size: 2em;
+	color: var(--color-white);	
+}
+main .my-skills h1 i{
+	font-size: 0.8em;
+}
+main .my-skills .skills{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+
+	margin-top: 2rem;
+}
+main .my-skills .skills .skill{
+	width: 6.5rem;
+	height: 6.5rem;
+	background: var(--color-white);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 3em;
+
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+main .my-skills .skills .skill:hover{
+	animation: scale .50s ease both;
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, .12);
+}
+@keyframes scale{
+	0%{transform: scale(1)}
+	100%{transform: scale(1.25)}
+}
+main .my-skills .skills .skill p{
+	font-size: 0.5em;
+}
+main .my-skills .skills .html5 {
+	color: var(--color-html);
+}
+main .my-skills .skills .css3 {
+	color: var(--color-css);
+}
+main .my-skills .skills .js {
+	color: var(--color-js);
+}
+main .my-skills .skills .css3:hover::before,
+main .my-skills .skills .html5:hover::before{
+	content: 'Experient';
+	position: absolute;
+	top: 7rem;
+	font-size: .3em;
+	text-align: center;
+}
+main .my-skills .skills .js:hover::before{
+	content: 'Estuding';
+	position: absolute;
+	top: 7rem;
+	font-size: .3em;
+	text-align: center;
+}
+
+/* chanching style of scrollbar */
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-purple);
+}
+::-webkit-scrollbar {
+    width: 4px;
+    background: var(--color-purple);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-black);
+}
