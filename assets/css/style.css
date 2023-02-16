@@ -505,10 +505,9 @@ footer {
 	header .top .logo img{
 		width: 5rem;
 	}
-	header .top nav{display: none;}
-	header .top .lang{
-		width: 25%;
-	}
+	header .top nav,
+	header .top .lang{display: none;}
+
 	header .banner{
 		height: calc(100vh - 4.5rem);
 
@@ -675,4 +674,17 @@ footer {
 		box-shadow: 2px 4px 6px rgba(0, 0, 0, .20);
 		transition: .5s;
 	}
+	main .contact form {
+		width: 100%;
+	}
+	main .contact form label {
+		width: 75%;	
+
+	}
+	main .contact form button {
+		width: 35%;
+		height: 7vh;
+		border: none;
+	}
+	.wrapper-popup { display: none; }
 }
