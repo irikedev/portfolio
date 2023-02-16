@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Portfolio | iRikedev</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.css">
-    <link rel="styleshee" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <!-- <link rel="favicon" type="img/png" href="favicon.png"> -->
+    <link rel="favicon" type="icon" href="assets/img/favicon.ico">
   </head>
-  <body>
+  <body onload="checkClose()">
     <header>
       <div class="top">   
         <div class="logo">
-          <input type="color" name="">
+          <img src="assets/img/logo.png">
         </div>
         <nav>
           <ul>
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">SERVICE</a>
-            <a href="#">GITHUB</a>
-            <a href="#">CV</a>
-            <a href="#">CONTACT</a>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">CONTACT</a>
           </ul>
         </nav>
         <div class="lang">
@@ -32,7 +29,7 @@
         </div>
       </div>
 
-      <div class="banner">
+      <div class="banner" id="home">
         <div class="box left">
           <span class="hello">
             <strong></strong>
@@ -57,27 +54,78 @@
         </div>
       </div>
     </header>
+    <hr>
     <main>
+      <div class="about" id="about">
+        <div class="image">
+          <img src="assets/img/my-picture.jpg">
+        </div>
+        <div class="text">
+          <h2>About me</h2>
+          <p>Hi, <mark>my name is Paulo Henrique</mark>, I'm 16 years old and I'm from Brazil. I work with <mark>front-end development</mark>, more especifically with languages: HTML5, CSS3 and JavaScript! I am communicative, creative and I love group work! I have no experience, but I jave already developed some personal applications.</p>
+        </div>
+      </div>
       <div class="my-skills">
         <h1>My Skills <i class="fa-solid fa-code"></i></h1>
 
-        <div class="skills">
+        <div class="skills" id="skills">
           <div class="skill html5">
             <i class="fa-brands fa-html5"></i>
+            <div class="level">
+              <h4>Code </></h4>
+              <li>Expert</li>
+
+              <h4>Framework</h4>
+              <li>Bootstrap</li>
+            </div>
           </div>
           <div class="skill css3">
             <i class="fa-brands fa-css3"></i>
+            <div class="level">
+              <h4>Code </></h4>
+              <li>Expert</li>
+
+              <h4>Framework</h4>
+              <li>Tailwind</li>
+            </div>
           </div>
           <div class="skill js">
             <i class="fa-brands fa-js"></i>
+            <div class="level">
+              <h4>Code</h4>
+              <li>Student</li>
+
+              <h4>Lib</h4>
+              <li>Jquery</li>
+            </div>
           </div>
         </div>
       </div>
+      <div class="curriculum" id="cv">Curriculum</div>
+      <div class="contact" id="contact">
+        <h1>Contact</h1>
+        <form class="form" id="form" method="POST" action="">
+          <label for="femail">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="e-mail" id="femail" placeholder="" required>
+          </label>
+          <button type="submit">Send e-mail</button>
+        </form>
+      </div>
     </main>
+    <footer>
+      <p>Website coded by: <a href="#">iRikeDev.</a></p>
+    </footer>
+
+    <div class="wrapper-popup">
+      <div class="popup">
+        <p>Hello, welcome to my portfolio. Feel free!</p>
+        <button id="closepopup">Ok thanks</button>
+      </div>
+    </div>
+
+
     <script src="assets/plugins/jquery/jquery.js"></script>
-    <script src="assets/plugins/aos/dist/aos.js"></script>
-    <script>
-    </script>
-    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
